@@ -8,10 +8,7 @@ https://docs.docker.com/engine/install/ubuntu/
 sudo docker pull swaggerapi/swagger-ui
 
 ## running it individually
-sudo docker run -d -p 80:8080 -e BASE_URL=/docs -e SWAGGER_JSON=/foo/securesecrets-api-secret-network-3.1.yaml -v ~/docs:/foo swaggerapi/swagger-ui
-
-*** Note
-This assumes that the docs folder is `~/docs` is relative to your home directory. Or change path.
+sudo docker run -d -e API_URL=https://raw.githubusercontent.com/secretnodes/infraapi/master/docs/secret-4.yaml-p 80:8080 swaggerapi/swagger-ui
 
 ## to see logs 
 sudo docker logs -f {container-id}
